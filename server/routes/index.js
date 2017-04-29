@@ -14,10 +14,11 @@ let indexRoute = router.get('/',(req,res)=>{
 	});
 });
 
-//router.use('/users',auth, require('./users'));
+router.use('/countries', require('./countries'));
 //router.use('/modules', auth, require('./modules'));
 
 
 module.exports = {
+  router: router,
 	indexRoute : indexRoute
 }
