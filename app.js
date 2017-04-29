@@ -63,8 +63,8 @@ app.use(bodyParser.urlencoded({
 }));
 
 
-app.use(routes.indexRoute);
-//app.use(apiUrl, routes.router);
+app.use(apiUrl, routes.indexRoute);
+app.use(apiUrl, routes.router);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
