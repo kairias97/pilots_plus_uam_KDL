@@ -10,4 +10,14 @@ exports.getCountries = ()=> {
         return resolve(result);
       })
   });
-}
+};
+exports.getCountriesAndAirports = ()=> {
+  return new Promise((resolve, reject)=> {
+      db.get_all_countries((err, result)=> {
+        if(err){
+          return reject(err);
+        }
+        return resolve(result);
+      })
+  });
+};

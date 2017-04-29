@@ -10,3 +10,12 @@ exports.getAllCountries = function(req, res, next){
     		return next(err);
   		});
 }
+exports.getCountriesAndAirports = function(req, res, next){
+	Country.getCountriesAndAirports()
+		.then(result => {
+    		return res.json(result[0].get_all_countries);
+  		})
+  		.catch(err => {
+    		return next(err);
+  		});
+}
