@@ -16,6 +16,7 @@ let indexRoute = router.get('/',(req,res)=>{
 
 router.use('/countries', require('./countries'));
 router.use('/airports', require('./airports'));
+router.use('/poi', require('./poi'));
 //router.use('/modules', auth, require('./modules'));
 
 
